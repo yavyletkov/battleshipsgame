@@ -1,0 +1,240 @@
+* {
+  margin: 0px;
+  padding: 0px; }
+
+a {
+    text-decoration: none;
+    color: rgb(207, 207, 207);
+}
+body {
+    background: url('background.jpg') no-repeat center black;
+    background-size: auto;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+#copyright {
+    font-family: sans-serif;
+    position: absolute;
+    font-size: 16px;
+    top: 50px;
+    left: -10px;
+    color: rgb(207, 207, 207);
+    transform: rotate(-90deg);
+}
+
+div#battleField {
+    position: absolute;
+    top: 45%;
+    left: 40%;
+    background: url('board.png') no-repeat;
+    background-size: 512px 432px;
+    width: 512px;
+    height: 432px;
+    margin: -216px 0px 0px -256px;
+}
+
+img#moryak {
+    position: absolute;
+    margin-right: 80px;
+    bottom: 0px;
+    right: 0px;
+    width: 420px;
+    height: auto;
+}
+
+div#messageArea {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    background: url('cloud.png') no-repeat center;
+    background-size: contain;
+
+    display: flex;        /*не забыть*/
+    position: absolute;
+    bottom: 360px;
+    right: 40px;
+
+    width: 490px;
+    height: 230px;
+
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: black;
+    text-align: center;
+
+    transform: scale(1, 1);
+    transition: all 300ms;
+}
+
+div#messageArea.move {
+    transform: scale(1.12, 1.12);
+}
+
+table {
+    position: absolute;
+    top: 49px;
+    left: 87px;
+    border-spacing: 0px;
+}
+
+td {
+    width: 48px;
+    height: 48px;
+    /* background-color: white; */
+}
+
+form {
+    position: absolute;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    left: 40%;
+    margin-left: -195px;
+    bottom: 0px;
+    width: 350px;
+    padding: 10px 20px 10px 20px;
+    background-color: rgba(154, 255, 84, 0.31);
+}
+
+form input {
+    background-color: rgb(152, 207, 113);
+    border-color: rgb(83, 175, 19);
+    font-size: 15px;
+    margin: 10px;
+    padding: 10px;
+    padding-left: 20px;
+    border: none;
+
+}
+
+.hit {
+    background: url('ship.png') no-repeat center center;
+    background-size: 45px 12px;
+}
+
+.miss {
+    background: url('miss.png') no-repeat center center;
+    background-size: 39px 17px;
+}
+
+#fireButton {
+    padding: 10px;
+    font-weight: bold;
+}
+
+#fireButton:hover {
+    background: red;
+}
+
+@media screen and (min-width: 1400px) {
+    div#battleField {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
+
+    form {
+        left: 50%;
+    }
+
+    img#moryak {
+        position: absolute;
+        margin-right: 10%;
+        bottom: 0px;
+        right: 0px;
+        width: 420px;
+        height: auto;
+    }
+
+    div#messageArea {
+
+        bottom: 400px;
+        right: 8%;
+
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+
+    body {
+        background-size: 4000px 4000px;
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+    }
+
+    img#moryak {
+        position: absolute;
+        margin-right: 0px;
+        bottom: 0px;
+        right: 50%;
+        margin-right: -270px;
+        width: 600px;
+        height: auto;
+    }
+
+    div#battleField {
+        position: absolute;
+        display: block;
+        top: 32%;
+        left: 50%;
+        background: url('board.png') no-repeat;
+        background-size: 768px 648px;
+        width: 768px;
+        height: 648px;
+        margin: -324px 0px 0px -384px;
+    }
+
+    .hit {
+        background: url('ship.png') no-repeat center center;
+        background-size: 67px 18px;
+    }
+
+    .miss {
+        background: url('miss.png') no-repeat center center;
+        background-size: 58px 25px;
+    }
+
+    table {
+        position: absolute;
+        top: 73px;
+        left: 130px;
+        border-spacing: 0px;
+    }
+
+    td {
+        width: 72px;
+        height: 72px;
+    }
+
+    form {
+        position: absolute;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        left: 50%;
+        margin-left: -195px;
+        bottom: 0px;
+        width: 350px;
+        padding: 10px 20px 10px 20px;
+        background-color: rgba(154, 255, 84, 0.41);
+    }
+
+    div#messageArea {
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+        background: url('cloud.png') no-repeat center;
+        background-size: contain;
+        position: absolute;
+        bottom: 580px;
+        right: 50%;
+
+        width: 490px;
+        height: 230px;
+        margin-right: -245px;
+        margin-top: -115px;
+
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        color: black;
+        text-align: center;
+    }
+}
